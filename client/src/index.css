@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-agri: #15803d;
+  --primary-dark: #14532d;
+  --primary-light: #f0fdf4;
+  --accent-mint: #10b981;
+  --accent-amber: #f59e0b;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased font-poppins;
+  }
+}
+
+/* Custom Scrollbar for smooth dashboard experience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Subtle Card Glow and Gradients */
+.agri-gradient-header {
+  background: linear-gradient(135deg, #14532d 0%, #166534 60%, #15803d 100%);
+}
+
+.agri-gradient-subtle {
+  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.agri-glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(187, 247, 208, 0.6);
+}
+
+.agri-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Accessible focus ring */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
